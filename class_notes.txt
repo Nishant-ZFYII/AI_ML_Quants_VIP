@@ -1,0 +1,250 @@
+Dear all,
+
+I hope you are doing well.
+
+Please find attached the grading scheme for the VIP course. The final grade will be composed of the following components:
+
+Lab Notes (10%)
+Every week, you are required to submit lab notes summarizing your progress during the in-person session. This may include algorithms implemented, experiments conducted, ablation studies, and any errors or problems encountered.
+A template will be shared with you and must be followed. All lab notes should be uploaded to a shared Excel sheet that will be provided. 
+
+Machine Learning Models (30%)
+You are required to implement machine learning models as part of the course project. This component accounts for 30% of the final grade, with 7.5% per model, meaning that at least four models must be implemented per student.
+For each model:
+
+2.5% is awarded for a correct and functional implementation,
+
+5% is awarded for code quality, including adherence to the shared abstract class, documentation, modularity, clarity, and comments.
+
+Dataset Collection or Investment Strategies (10%)
+In the second part of the VIP, each student will choose one of the following tracks:
+
+Dataset collection, or
+
+Investment strategies implementation.
+
+This component accounts for 10% of the final grade.
+
+For dataset collection, you are required to:
+
+Write clear documentation describing the collected data and sources,
+
+Detail the data web scraping pipeline,
+
+Specify any proprietary or commercial-use restrictions, if applicable,
+
+Process and clean the data with proper documentation,
+
+Perform an exploratory data analysis (EDA).
+
+For investment strategies, you are required to:
+
+Conduct a literature review (papers, blog posts, lecture notes),
+
+Summarize the main ideas and the reasoning behind each investment strategy,
+
+Highlight the advantages and limitations of each strategy,
+
+Implement the strategies in clean, well-documented code following the shared abstract class.
+
+Midterm Presentation (10%)
+You will give a midterm presentation (date to be announced). This presentation accounts for 10% of your final grade. The goal is to share your progress with your peers, explain the implemented models, and report preliminary results.
+
+Final Report (40%)
+You are required to submit a final report summarizing the overall findings of the VIP. Each member is responsible for writing the sections related to their own contributions, including:
+
+Models implemented,
+
+Assumptions,
+
+Advantages and limitations,
+
+Results obtained.
+
+This report accounts for 40% of the final grade.
+
+Attendance Policy
+Any unjustified absence will result in a 5-point penalty applied to the final grade.
+
+Credits Policy
+
+VIP members registered for 0 credits must obtain a minimum final grade of 70% to pass the course.
+
+VIP members registered for credit will receive a letter grade following the FRE grading scheme.
+
+Please feel free to reach out if you have any questions.
+
+Best regards,
+Abdessalam Ed-dib
+
+====================
+
+A notebook containing an abstract class to be followed during your implementation has been provided on Brightspace, along with an example. Please make sure to follow it closely when implementing your models.
+
+VIP_Abstract_Class.ipynb
+
+============================
+
+The lab notes should follow the following template.
+Lab Notes Template.docx
+
+===========================
+
+
+Dear all,
+
+I hope you are doing well.
+
+Please find below the link for selecting the models you will be working on implementing. Kindly make sure to complete your selection before next session.
+
+Agriculture Markets.xlsx
+
+
+The models are organized into different categories, and we will be adding additional models over time. If you are interested in working on a model that is not currently listed, you are welcome to add it to the sheet under the appropriate section.
+
+Best regards,
+Abdessalam
+
+===============================
+
+
+Dear all,
+
+I hope you are doing well.
+
+This email is to present the data sources that will be used for the project at this initial phase. For the macroeconomic variables, we will rely on FRED-MD, which is well-established monthly database designed for macroeconomic research. These datasets include a wide range of U.S. macroeconomic indicators commonly used in empirical economic and financial studies.
+
+For the commodity component, specifically wheat, we will use U.S. Wheat Futures historical price data obtained from Investing.com. 
+
+Best regards,
+Abdessalam
+
+====================================
+
+Hi all,
+
+Please find attached the common preprocessing we will use.
+
+Best,
+
+Idriss
+
+Agriculture - Lab Meetings.docx
+
+
+===================================
+
+Survey_of_Commodity_Price_Forecasting (2).pdf
+
+
+Dear all,
+
+I hope you are doing well. The report from the last cohort has been uploaded to Brightspace. Please make sure to read it before next week in order to get a sense of what the previous cohort has done.
+
+Best regards,
+Abdessalam Ed-dib
+
+===========================
+
+Dear all,
+
+I hope you are doing well. This email is regarding the organization and requirements of the VIP course lab sessions.
+
+To avoid constraining everyone to attend the full two-hour lab every week given different schedules, these sessions will mainly function as office hours. Therefore, you are encouraged to attend if you:
+
+need help with your code,
+
+encounter errors you cannot solve, or
+
+have concepts or material you did not fully understand.
+
+Lab Notes Submission
+To allow everyone to work more efficiently, lab notes will no longer need to be submitted on the same day. Instead, you will have one full week to submit them.
+
+Deadline: the night before the office hours, at 6:00 PM.
+
+Your lab notes should include:
+
+the code/model developed during the week (one model per week),
+
+any questions, difficulties, or issues you encountered.
+
+After the office hours, both your lab notes and notebooks (codes on Colab) will be graded.
+
+Attendance and Penalty Policy
+During the first two sessions, some students were absent.
+
+We will not apply the 5% penalty for those missed sessions.
+
+However, from now on, missing three lab notes + code submissions will result in an F for the course.
+
+Mandatory Meetings
+In addition, there will be four mandatory meetings where everyone must attend to present progress, share findings with peers, and synchronize work.
+
+Meeting 1: Presentation of the models collected (25th February)
+
+Meeting 2: Two investment strategies coded or one dataset collected (text or satellite images) (11th March)
+
+Meeting 3: Remaining strategies completed or second dataset collected (1st April)
+
+Meeting 4: Final meeting to summarize the work conducted during the VIP (13th May)
+
+Please feel free to reach out if you have any questions.
+
+Best regards,
+
+===============================
+
+Dear all,
+
+Thank you for your work on the Week 1 lab. Below are a few general reminders and suggestions to help ensure a smooth grading process going forward:
+
+1. Sharing / Access
+Please make sure you have granted access to your lab notes and Colab notebook to im2868@nyu.edu. 
+If you have not yet shared your materials, kindly do so by Sunday, Feb 8 at 12:00 PM, so we can complete grading.
+Starting next week, we won’t be able to request access individually. If your Lab notes are not accessible, the submission will receive a 0 for that week. Please also keep in mind that missing lab notes or code for three consecutive weeks results in a failing grade (F).
+
+2. Colab Link
+Please include a link to your Colab notebook at the very beginning of your lab notes, and ensure the notebook contains your work.
+For those who have not yet submitted, the deadline remains Sunday, Feb 8 at 12:00 PM.
+From next week onward, if the Colab link is missing or the notebook is empty, the code portion will receive a 0, and only the written notes will be graded.
+
+3. AI Usage
+You are welcome to use AI tools. That said, some submissions included unedited AI outputs (e.g., raw pasted conversations). This makes it difficult to assess your own understanding and work.
+Please be sure to carefully review, clean up, and adapt any AI-generated content before including it in your notes. Clear and concise code will also make grading easier and more effective.
+
+4. Integration into the Dashboard & Next Milestone
+Starting this week, we will progressively integrate the fully working forecasting models into our dashboard. The goal is that, during our next group meeting, we will be able to showcase the winning models and rank them. This is an important milestone for the second half of the VIP: it will allow us to empower the best-performing models with alternative data and to begin building investment strategies based on their predictions.
+
+You are also more than welcome to join the VIP office hours if you need help unlocking any issues or questions you may be facing.
+
+Thank you for your attention to these points and for your continued efforts.
+
+Kind regards,
+Prof. Amine Aboussalah
+
+=========================
+
+
+TO BE FILLED UPON WEEKLY UPDATE
+
+=========================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
