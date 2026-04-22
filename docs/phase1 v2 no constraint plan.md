@@ -4,13 +4,26 @@
 
 **Current state.** The `phase1_v2_classification_all_models.ipynb` pipeline (v2.3) reached **52.2 % accuracy / AUC 0.526** on next-day wheat direction using the TA-mandated setup: 31 FRED-MD variables + lagged close, 30-day rolling window, 5-fold `TimeSeriesSplit` over 2008+, BiGRU with 5-seed ensembling as the headline model. Phase 2's full `+ABC` alt-data stack independently reached **52.1 % / AUC 0.535** on BiRNN+Attention. The TA-compliant ceiling on this dataset clusters in the 51–52.2 % band.
 
-**Why this plan.** The TA brief forced several choices that bound accuracy from above: next-day target horizon (lowest SNR of any horizon we could pick), static 5-fold CV instead of walk-forward, no price transformations beyond log-return, no regime-aware training. Separately, the user asked "if we relaxed the TA constraints, how much more is there?" The no-constraint answer was ~80 % — but most of that lift came from ingredients (5-day target, OHLCV/weather/sentiment data, XGBoost/TFT models) that redefine the research question rather than solving the current one.
+**Why this plan.** The TA brief forced several choices that bound accuracy from above: next-day target horizon (lowest SNR of any horizon we could pick), static 5-fold CV instead of walk-forward, no price transformations beyond log-return, no regime-aware training. Separately, the user asked "if we relaxed the TA constraints, how much more is there?"
+
+**Reality check on expected accuracy.** Earlier drafts of this plan floated numbers like "70–75 % on 5-day" and "~80 % with no constraints." Those are not realistic for out-of-sample commodity direction forecasting. Consensus from the literature and practitioner discussions (Quant SE, published commodity-forecasting papers, reddit/algotrading and r/Commodities surveys):
+
+- **Sophisticated quant firms achieve 51–58 % directional accuracy out-of-sample** on liquid commodity futures. 60 %+ is usually a red flag for overfitting or look-ahead leakage, not a genuinely stronger model.
+- **Alternative-data lift is typically +2–5 pp**, not +10–20 pp. Weather, sentiment, and satellite features move the needle in that range when honestly validated.
+- **In-sample vs out-of-sample gap is large.** Studies routinely show 78 %+ in-sample accuracy collapsing to 50–55 % out-of-sample. Phase0_v1's 74 % wavelet number was in that trap (acausal DWT leak). The honest number was much lower.
+- **Regime matters more than model.** Calm regimes give 1.5–4 % MAPE on price levels; volatile regimes blow out to 10–20 % error. A single model averaged across regimes sits in the middle and looks mediocre on both.
+
+**Revised honest ceiling under these constraints:**
+
+| Horizon | v2.3 baseline | Realistic ceiling with this plan | Why not higher |
+|---|---|---|---|
+| Next-day direction | 52.2 % | **53–55 %** | Daily SNR is near-zero on wheat; +1–3 pp is the practitioner consensus for a good-but-not-magic model |
+| 5-day direction | ~54 % (not yet measured honestly) | **55–58 %** | 5-day has more SNR than daily but is still in the 51–58 % band that liquid-commodity forecasters sit in |
+| Daily, conviction-gated (top-50 % confidence) | n/a | **56–60 % on kept subset** | Honest framing: accuracy on days worth acting on. This is where firms actually live |
+
+The earlier 73–75 % and 80 % numbers are **withdrawn** — they were theoretical upper bounds that required ingredients (leaky features, in-sample evaluation, target-definition changes, broader model classes) this plan excludes.
 
 **This plan's constraints.** We keep the **31 FRED-MD macros** (fixed feature source) and the **three existing RNN architectures** (BiGRU, BiRNN+Attention, BiRNN+Skip, plus ARX logistic as linear baseline). Everything else the TA prescribed — target horizon, window length, CV protocol, price-channel transformations, training-time augmentations, ensembling strategy — is negotiable. Outcome: a research path that honestly estimates the ceiling of this **model+data combination** without changing the problem's ingredient list.
-
-**Honest ceiling under these constraints:**
-- Daily direction target: **~55–57 %** (up from 52.2 %)
-- 5-day direction target: **~73–75 %** (up from ~70 % in phase0_v1's leaky wavelet experiment)
 
 ---
 
